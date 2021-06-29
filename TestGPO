@@ -1,0 +1,8 @@
+#Create new GPO
+New-GPO -Name TestGPO
+
+#Merge new GPO with OU
+New-GPLink -Target "ou=TestGPO"
+
+#Set permission level for GPO
+Set-GPPermission -Name TestGpo -TargetName "Domain Users" -TargetType Group -PermissionLevel GpoRead
