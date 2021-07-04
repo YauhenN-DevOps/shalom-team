@@ -29,3 +29,5 @@ Add-DnsServerResourceRecordA -Name "newname" -ZoneName "zemcov.local" -AllowUpda
 #>
 
 Add-DnsServerPrimaryZone -NetworkID 192.168.0.160 -ZoneFile "0.168.192.in-addr.arpa.dns"
+
+Test-DnsServer -IPAddress 192.168.0.160 -ZoneName "zemcov.local"
